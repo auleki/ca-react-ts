@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 import { colors as c, fonts as f, metrics } from './constants'
-import BgImage from '../assets/blurry-gradient-haikei.png'
+
 
 export const AppContainer = styled.div(
   () => css`
@@ -60,13 +60,44 @@ export const SHeader = styled.section(
       text-align: center;
       color: ${c.white};
     }
-    .subscription__box {
-      text-align: center;
+  `
+)
+
+export const SSubscription = styled.section(
+  () => css`
+    text-align: center;
+    margin-top: 1em;
+    .text {
+      color: ${c.white};
+      font-size: 1em;
+    }
+    .subscribe__field {
+      background: ${c.orange};
+      display: inline-block;
+      padding: .4em 1.5em;
+      /* border-radius: ${metrics.borderRadius}; */
+      border-radius: 4px;
       margin-top: 1em;
-      .subscribe__field {
-        background: ${c.lightBlack};
+      input {
+        padding: 1em;
+        color: ${c.white};
+        font-size: 1em;
+        background-color: transparent;
+        &::placeholder {
+          color: ${c.white};
+        }
+      }
+      button {
+        padding: 1em .5em;
+        background: transparent;
+        color: ${c.black};
+        font-size: 1em;
+        cursor: pointer;
+        transition: color 200ms ease-in;
+        &:hover {
+          color: ${c.white};
+        }
       }
     }
-
   `
 )
