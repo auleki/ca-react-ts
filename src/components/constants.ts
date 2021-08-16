@@ -17,3 +17,7 @@ export const fonts = {
   workSans: 'Work Sans',
   bitter: 'Bitter'
 }
+
+export const metrics = {
+  borderRadius: '.3rem'
+}
