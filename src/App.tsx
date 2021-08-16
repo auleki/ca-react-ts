@@ -1,11 +1,13 @@
 import PageRoutes from "./components/PageRoutes";
-
+import Navbar from "./components/Navbar"
+import { AppContainer } from "./components/StyledComponents";
 
 function App() {
   return (
-    <div>
+    <AppContainer>
+      <Navbar />
       <PageRoutes />
-    </div>
+    </AppContainer>
   );
 }
 
