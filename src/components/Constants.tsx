@@ -1,4 +1,5 @@
 import * as BsIcon from "react-icons/bs";
+import * as BiIcon from 'react-icons/bi'
 
 export const colors = {
   orange: '#F36B2B',
@@ -28,5 +29,5 @@ export const metrics = {
 
 export const icons = {
   send: <BsIcon.BsEnvelope />,
-
+  plus: <BiIcon.BiPlus />
 }

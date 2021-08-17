@@ -140,6 +140,10 @@ export const Container = styled.section(
       padding: 1em;
       .collection__title {
         font-size: 2em;
+        padding: 0 1.5em .5em;
+        font-family: ${f.headerTitleFont};
+        display: inline-flex;
+        border-bottom: 5px solid ${c.red};
       }
     }
   `
@@ -160,6 +164,7 @@ export const SCard = styled.div(
     border: 2px solid ${c.black};
     display: flex;
     flex-direction: column;
+    position: relative;
     box-shadow: 10px 10px 5px 0px rgba(207,207,207,0.83);
     -webkit-box-shadow: 10px 10px 5px 0px rgba(207,207,207,0.83);
     -moz-box-shadow: 10px 10px 5px 0px rgba(207,207,207,0.83);    
@@ -170,10 +175,79 @@ export const SCard = styled.div(
     &:hover {
       box-shadow: 10px 10px 5px 0px rgba(0, 0, 20,0.23);
     }
+
+    .product__name {
+      /* styling */
+    }
+    
+    .product__category {
+      position: absolute;
+      bottom: 0;
+      background: ${c.orange};
+      color: ${c.white};
+      padding: .5em;
+      border-top-left-radius: 15px;
+      border-bottom-left-radius: 2px;
+      right: 0;
+    }
+    
+    .image {
+      text-align: center;
+    }
+
+    button {
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 2px;
+    }
     
     .product__image {
       height: auto;
-      width: 200px;
+      /* border: 1px solid red; */
+      width: 300px;
+    }
+  `
+)
+
+export const SButton = styled.button(
+  () => css`
+    background: ${c.orange};
+    padding: 1em;
+    cursor: pointer;
+    color: ${c.white};
+    display: flex;
+    overflow: hidden;
+    gap: .5em;
+    align-items: center;
+    transition: background 200ms ease-out;
+    .icon {
+      color: ${c.orange};
+      background: ${c.white};
+      height: 1.5em;
+      width: 1.5em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 200ms ease-in;
+      font-size: 1.2em;
+    
+      border-radius: 50%;
+    }
+    .text {
+      font-size: 1.2em;
+    }
+    &:hover {
+      background: ${c.white};
+      color: ${c.black};
+      .icon {
+        transform: translateX(.5em);
+        background-color: ${c.gray};
+        box-shadow: 1px 2px 4px rgba(0, 0, 19, .4);
+      }
+    }
+    &:active {
+      .icon {
+        transform: translateX(100px);
+      }
     }
   `
 )

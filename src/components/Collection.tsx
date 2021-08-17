@@ -1,5 +1,5 @@
 import ProductCard from "./ProductCard"
-import { Container, SCard, SCollections } from "./StyledComponents"
+import { Container, SCollections } from "./StyledComponents"
 
 const Collection = () => {
   return (
