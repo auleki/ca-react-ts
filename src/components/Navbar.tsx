@@ -12,7 +12,6 @@ const Navbar = () => {
         <NavLink to="/about">About</NavLink>
         <NavLink to="/cart">Cart</NavLink>
       </div>
-
     </SNavbar>
   )
 }

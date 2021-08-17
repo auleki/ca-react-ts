@@ -18,7 +18,8 @@ export const fonts = {
   secondary: '',
   workSans: 'Work Sans',
   bitter: 'Bitter',
-  headerTitleFont: 'Architects Daughter'
+  headerTitleFont: 'Architects Daughter',
+  poppins: "Poppins"
 }
 
 export const metrics = {
