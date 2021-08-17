@@ -6,7 +6,7 @@ const Header = () => {
     <SHeader>
       <section className="text">
         <h2 className="title">
-          clothes for the coming trend
+          clothes for the <span>coming trend.</span>
         </h2>
         <Subscription />
       </section>

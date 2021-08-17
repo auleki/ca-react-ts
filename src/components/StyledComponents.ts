@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import { colors as c, fonts as f, metrics } from './constants'
+import { colors as c, fonts as f, metrics } from './Constants'
 
 
 export const AppContainer = styled.div(
@@ -43,7 +43,7 @@ export const SNavbar = styled.nav(
 
 export const SHeader = styled.section(
   () => css`
-    background: linear-gradient(to top, #F36A2B5E, #00000067), 
+    background: linear-gradient(to top, #110C0A5E, #00000067), 
     url('https://res.cloudinary.com/checkadigs/image/upload/v1626714806/4_6001518644931069900-min_dhh53w.jpg') no-repeat center;
     background-attachment: fixed;
     background-size: cover;
@@ -54,11 +54,14 @@ export const SHeader = styled.section(
     justify-content: center;
     width: 100%;
     .title {
-      font-family: ${f.main};
-      font-size: 2em;
+      font-family: ${f.headerTitleFont};
+      font-size: 4em;
       text-transform: uppercase;
       text-align: center;
       color: ${c.white};
+      span {
+        color: ${c.red};
+      }
     }
   `
 )
@@ -69,17 +72,23 @@ export const SSubscription = styled.section(
     margin-top: 1em;
     .text {
       color: ${c.white};
-      font-size: 1em;
+      font-size: 1.5em;
+      
+      text-align: center;
     }
     .subscribe__field {
-      background: ${c.orange};
-      display: inline-block;
+      -webkit-box-shadow: 6px 6px 15px 0px #0000006C; 
+      box-shadow: 6px 6px 15px 0px #0000006C;
+      background: ${c.black};
+      display: inline-flex;
+      align-items: center;
       padding: .4em 1.5em;
       /* border-radius: ${metrics.borderRadius}; */
       border-radius: 4px;
       margin-top: 1em;
       input {
         padding: 1em;
+        font-family: ${f.headerTitleFont};
         color: ${c.white};
         font-size: 1em;
         background-color: transparent;
@@ -88,14 +97,29 @@ export const SSubscription = styled.section(
         }
       }
       button {
-        padding: 1em .5em;
-        background: transparent;
-        color: ${c.black};
-        font-size: 1em;
+        height: 2em;
+        width: 3em;
+        padding: .5em 1em;
+        /* background: transparent; */
+        background: ${c.lightBlack};
+        border-radius: 5px;
+        color: ${c.white};
+        /* display: flex; */
+        /* align-items: center; */
+        font-size: 1.5em;
         cursor: pointer;
-        transition: color 200ms ease-in;
+        transition: color 200ms ease-in,
+        background 250ms ease-in,
+        transform 200ms ease-in;
         &:hover {
+          background: ${c.red} ;
           color: ${c.white};
+        }
+        &:active {
+          transform: translateY(.5em);
+          .icon {
+            transform: translateX(1em);
+          }
         }
       }
     }
