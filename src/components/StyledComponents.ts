@@ -83,7 +83,7 @@ export const SSubscription = styled.section(
       display: inline-flex;
       align-items: center;
       padding: .4em 1.5em;
-      /* border-radius: ${metrics.borderRadius}; */
+      overflow: hidden;
       border-radius: 4px;
       margin-top: 1em;
       input {
@@ -110,13 +110,13 @@ export const SSubscription = styled.section(
         cursor: pointer;
         transition: color 200ms ease-in,
         background 250ms ease-in,
-        transform 200ms ease-in;
-        &:hover {
+        transform 150ms ease-in;
+        &:hover, &:focus{
           background: ${c.red} ;
           color: ${c.white};
         }
         &:active {
-          transform: translateY(.5em);
+          transform: translateY(.3em);
           .icon {
             transform: translateX(1em);
           }
